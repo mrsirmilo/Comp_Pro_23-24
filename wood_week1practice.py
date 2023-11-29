@@ -26,6 +26,7 @@ print("We want to know if you like programming!")
 print("Do you like programming " + user_name + "?"); answer = input()
 print("Great! You said " + answer + "!")
 
+# Final exercise
 def ask_for_name():
     cb_name = input("Welcome! What is your full name?")
     print(f"Hello {cb_name}, welcome to (company name). I'm going to collect some contact information before we start.")
