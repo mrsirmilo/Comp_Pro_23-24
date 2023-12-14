@@ -89,7 +89,7 @@ def area_of_rhombus():
         elif diagonal2 < 0:
             print("Invalid Input")
         else:
-            area = (diagonal1+diagonal2) // 2
+            area = (diagonal1 * diagonal2) // 2
             print(f"Area: {area}")
 while True:
     area_of_square()
