@@ -13,13 +13,14 @@ print("2. Area of a rectangle")
 print("3. Area of a triangle")
 print("4. Area of a circle")
 print("5. Area of a trapezoid")
+print("6. Area of a rhombus")
 
-# This block of code makes it so the user HAS to input 1, 2, 3, 4, or 5, or the program will exit
+# This block of code makes it so the user HAS to input 1, 2, 3, 4, 5, or 6, or the program will exit
 
 import math
 
 try:
-    choice = int(input("Select your choice(1/2/3/4/5): "))
+    choice = int(input("Select your choice(1/2/3/4/5/6): "))
 except ValueError:
     print("Invalid input!")
     exit()
@@ -78,10 +79,23 @@ def area_of_trapezoid():
         else:
             area = [(base1 + base2) * height] // 2
             print(f"Area: {area}")
+
+def area_of_rhombus():
+    if choice == 6:
+        diagonal1 = float(input("Enter the first diagonal of the rhombus: "))
+        diagonal2 = float(input("Enter the second diagonal of the rhombus: "))
+        if diagonal1 < 0:
+            print("Invalid Input")
+        elif diagonal2 < 0:
+            print("Invalid Input")
+        else:
+            area = (diagonal1+diagonal2) // 2
+            print(f"Area: {area}")
 while True:
     area_of_square()
     area_of_rectangle()
     area_of_triangle()
     area_of_circle()
     area_of_trapezoid()
+    area_of_rhombus()
     break
